@@ -4,49 +4,150 @@
 
 body {
    font-family: $font-family;
-   font-size: $fs-medium;
+   font-size: $fs-md;
    background-color: $neutral-white;
-   margin: 2rem 0;
+
    text-align: left;
    display: flex;
    justify-content: center;
    align-items: center;
 }
 
-main {
-   overflow: hidden;
+.container {
+   padding: 0 1.5rem;
+   margin: 0 auto;
+   max-width: 1280px;
+}
 
+main {
+   outline: 1px solid lightgrey;
    display: grid;
-   row-gap: 2rem;
+   grid-template-columns: 1fr;
+   grid-template-rows: 40% 48% 12%;
    background-color: $neutral-white;
    border-radius: 15px;
+   overflow: hidden;
 }
 
-.container {
-   padding: 0 2rem;
-}
+.hero {
+   // grid-row: 1 / 2;
+   overflow: hidden;
 
-.hero-img {
    img {
-      // border-radius: 15px 15px 0 0;
+      width: 100%;
    }
 }
 
-.content {
-   outline: 1px solid black;
-}
+.text {
+   // grid-row: 2 / 3;
+   padding: 0 2rem;
+   letter-spacing: 0.5px;
+   align-self: center;
 
-.social-overlay {
-   background-color: $primary-dark;
-   color: $primary-light;
+   h3 {
+      color: $primary-dark;
+      font-weight: 700;
+      font-size: $fs-lg;
+      margin-bottom: 1rem;
+   }
 
    p {
-      text-transform: capitalize;
+      color: $primary-light;
+      font-weight: 500;
+      line-height: 1.5;
    }
 }
 
-.btn-wrap {
-   outline: 1px solid red;
-
+.profile {
+   // grid-row: 3 / -1;
    display: flex;
+
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 2rem;
+   position: relative;
+
+   img {
+      width: 2.5rem;
+      border-radius: 100%;
+      max-width: 100%;
+   }
+
+   button {
+      padding: 6px;
+      border: none;
+      border-radius: 100%;
+      background-color: hsl(215, 46.2, 94.9);
+      outline: 1px solid grey;
+      z-index: 3;
+
+      &:hover {
+         cursor: pointer;
+      }
+
+      img {
+         width: 18px;
+      }
+   }
+
+   .avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      span {
+         font-weight: 700;
+         color: $primary-dark;
+      }
+
+      p {
+         color: $neutral-light;
+      }
+   }
+
+   .name {
+      margin-left: 0px;
+   }
+}
+
+// bottom social section
+
+.social {
+   display: none;
+   z-index: 1;
+
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   padding: 1.3rem 2rem;
+   width: 100%;
+   overflow: hidden;
+   background-color: $primary-dark;
+
+   .social-wrap {
+      display: flex;
+      justify-content: flex-start;
+
+      p {
+         letter-spacing: 5px;
+         color: $neutral-light;
+         font-weight: 500;
+         text-align: center;
+         transform: translateY(2px);
+         margin-right: 1rem;
+      }
+   }
+
+   .btn {
+      display: flex;
+      gap: 0.5rem;
+      img {
+         width: 1.4rem;
+      }
+   }
+}
+
+.active {
+   display: block;
 }

@@ -82,39 +82,141 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 0.8125rem;
   background-color: #ecf2f8;
-  margin: 2rem 0;
   text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.container {
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
 main {
-  overflow: hidden;
+  outline: 1px solid lightgrey;
   display: grid;
-  row-gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40% 48% 12%;
   background-color: #ecf2f8;
   border-radius: 15px;
+  overflow: hidden;
 }
 
-.container {
+.hero {
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.text {
   padding: 0 2rem;
+  letter-spacing: 0.5px;
+  align-self: center;
 }
 
-.content {
-  outline: 1px solid black;
+.text h3 {
+  color: #48556a;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
-.social-overlay {
-  background-color: #48556a;
+.text p {
   color: #6d7f97;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
-.social-overlay p {
-  text-transform: capitalize;
-}
-
-.btn-wrap {
-  outline: 1px solid red;
+.profile {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.profile img {
+  width: 2.5rem;
+  border-radius: 100%;
+  max-width: 100%;
+}
+
+.profile button {
+  padding: 6px;
+  border: none;
+  border-radius: 100%;
+  background-color: #ecf1f8;
+  outline: 1px solid grey;
+  z-index: 3;
+}
+
+.profile button:hover {
+  cursor: pointer;
+}
+
+.profile button img {
+  width: 18px;
+}
+
+.profile .avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile .avatar span {
+  font-weight: 700;
+  color: #48556a;
+}
+
+.profile .avatar p {
+  color: #9eafc2;
+}
+
+.profile .name {
+  margin-left: 0px;
+}
+
+.social {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.3rem 2rem;
+  width: 100%;
+  overflow: hidden;
+  background-color: #48556a;
+}
+
+.social .social-wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social .social-wrap p {
+  letter-spacing: 5px;
+  color: #9eafc2;
+  font-weight: 500;
+  text-align: center;
+  transform: translateY(2px);
+  margin-right: 1rem;
+}
+
+.social .btn {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social .btn img {
+  width: 1.4rem;
+}
+
+.active {
+  display: block;
 }

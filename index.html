@@ -12,16 +12,16 @@
          href="./images/favicon-32x32.png"
       />
       <link rel="stylesheet" href="/dist/css/main.css" />
+      <script src="/app.js" defer></script>
 
       <title>Frontend Mentor | Article preview component</title>
    </head>
    <body>
       <div class="container">
          <main>
-            <div class="hero-img">
-               <img src="/images/drawers.jpg" alt="" />
-            </div>
-            <div class="content">
+            <div class="hero"><img src="/images/drawers.jpg" alt="" /></div>
+
+            <div class="text">
                <h3>
                   Shift the overall look and feel by adding these wonderful
                   touches to furniture in your home
@@ -33,19 +33,34 @@
                </p>
             </div>
             <div class="profile">
-               <img src="/images/avatar-michelle.jpg" alt="" />
-               <span>Michelle Appleton</span>
-               <p>28 Jun 2020</p>
-               <button><img src="/images/icon-share.svg" alt="" /></button>
-               <div class="social-overlay">
-                  <p>Share</p>
-                  <div class="btn-wrap">
-                     <img src="/images/icon-facebook.svg" alt="" />
-                     <img src="/images/icon-twitter.svg" alt="" />
-                     <img src="/images/icon-pinterest.svg" alt="" />
-                     <img src="/images/icon-share.svg" alt="" />
+               <div class="avatar">
+                  <img src="/images/avatar-michelle.jpg" alt="" />
+                  <div class="name">
+                     <span>Michelle Appleton</span>
+                     <p>28 Jun 2020</p>
                   </div>
                </div>
+               <div class="social active">
+                  <div class="social-wrap">
+                     <p>SHARE</p>
+                     <div class="btn">
+                        <img src="/images/icon-facebook.svg" alt="" />
+                        <img src="/images/icon-twitter.svg" alt="" />
+                        <img src="/images/icon-pinterest.svg" alt="" />
+                     </div>
+                  </div>
+               </div>
+               <button><img src="/images/icon-share.svg" alt="" /></button>
+               <!-- <div class="social-overlay">
+                  <div class="btns">
+                     <p>Share</p>
+                     <div class="btn-wrap">
+                        <img src="/images/icon-facebook.svg" alt="" />
+                        <img src="/images/icon-twitter.svg" alt="" />
+                        <img src="/images/icon-pinterest.svg" alt="" />
+                     </div>
+                  </div>
+               </div> -->
             </div>
          </main>
       </div>
