@@ -152,7 +152,7 @@ main {
 
 @media (min-width: 768px) {
    .container {
-      padding: 0 2rem;
+      padding: 0 3rem;
    }
 
    body {
@@ -191,6 +191,7 @@ main {
          font-size: 2rem;
       }
    }
+   // TODO
 
    .social {
       .social-wrap {
@@ -214,6 +215,9 @@ main {
 }
 
 @media (min-width: 1024px) {
+   .container {
+      padding: 0 5rem;
+   }
    body {
       font-size: 1.75rem;
    }
@@ -240,37 +244,112 @@ main {
    }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1180px) {
+   body {
+      font-size: $fs-lg;
+   }
+
+   .container {
+      padding: 0;
+      margin: 0 auto;
+      max-width: 1100px;
+   }
+
    main {
       display: grid;
-      grid-template-columns: 40% 60%;
+      grid-auto-columns: 1fr;
+      grid-template-columns: 35% 59%;
       grid-template-rows: 70% 30%;
       grid-template-areas:
          "hero  text"
          "hero profile";
+      column-gap: 3rem;
       background-color: $neutral-white;
       border-radius: 15px;
       overflow: hidden;
+
+      .hero {
+         outline: 1px solid green;
+         padding: 0;
+
+         grid-area: hero;
+      }
+
+      .text {
+         outline: 1px solid red;
+         padding: 0;
+         grid-area: text;
+         margin-top: 2rem;
+         margin-right: 1.5rem;
+
+         h3 {
+            font-size: 1.5rem;
+         }
+
+         p {
+            font-size: 1.15rem;
+            max-width: 50ch;
+         }
+      }
+
+      .profile {
+         outline: 1px solid blue;
+
+         padding: 0;
+         font-size: 1.1rem;
+
+         grid-area: profile;
+         margin: 1.5rem 0;
+
+         button {
+            margin-right: 1.5rem;
+            padding: 8px;
+            img {
+               width: 20px;
+            }
+         }
+
+         .avatar {
+            gap: 1.5rem;
+            img {
+               width: 3rem;
+            }
+         }
+      }
    }
 
-   .hero {
-      grid-area: hero;
-   }
-   .text {
-      grid-area: text;
-   }
-   .profile {
-      grid-area: profile;
-   }
+   .social {
+      display: none;
+      position: absolute;
+      overflow: hidden;
+      left: 0;
 
-   body {
-      font-size: 1.5rem;
-   }
+      .social-wrap {
+         display: flex;
+         justify-content: flex-start;
+         background-color: $primary-dark;
+         width: 100%;
+         padding: 10rem 0;
+         padding-left: 2rem;
+         padding-right: 100rem;
 
-   .text {
-      padding: 2rem 3rem;
-      h3 {
-         font-size: 2.25rem;
+         p {
+            letter-spacing: 5px;
+            color: $neutral-light;
+            font-weight: 500;
+            text-align: center;
+            transform: translateY(2px);
+            margin-right: 1rem;
+         }
+      }
+
+      .btn {
+         display: flex;
+         gap: 10px;
+         cursor: pointer;
+         img {
+            width: 1.4rem;
+         }
       }
    }
 }
